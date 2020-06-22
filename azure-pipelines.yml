@@ -30,6 +30,6 @@ stages:
         repository: 'kavinduchamiran/test'
         command: 'buildAndPush'
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: 'kavinduchamiran/test/$(tag)'
+        tags: '$(tag)'
 
     
