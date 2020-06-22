@@ -27,14 +27,9 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'build_pipeline'
-        repository: 'test'
-        command: 'build'
+        repository: 'kavinduchamiran/test'
+        command: 'buildAndPush'
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: '$(tag)'
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'build_pipeline'
-        repository: 'test'
-        command: 'push'
+        tags: 'kavinduchamiran/test/$(tag)'
 
     
